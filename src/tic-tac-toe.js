@@ -39,7 +39,7 @@ class TicTacToe {
             return false;
         }
 
-    var trueWinnerX=0,
+        var trueWinnerX=0,
             trueWinnerY=0,
             trueWinnerDiagonalX=0,
             trueWinnerDiagonalY=0;
