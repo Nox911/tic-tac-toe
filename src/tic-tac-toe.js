@@ -16,10 +16,10 @@ class TicTacToe {
 
     nextTurn(rowIndex, columnIndex) {
         
-        if (this.field[rowIndex][columnIndex]==null) {
+        if (this.field[rowIndex][columnIndex]===null) {
             this.field[rowIndex][columnIndex]=this.currentPlayer;
 
-            if (this.currentPlayer==this.playerOne) {
+            if (this.currentPlayer===this.playerOne) {
                 this.currentPlayer=this.playerTwo;
                 this.prevPlayer=this.playerOne;
             }
@@ -49,25 +49,25 @@ class TicTacToe {
         for (var i=0; i<3;i++ ) {
             
 
-                if (this.field[lastTurnX][i]==this.prevPlayer) {
+                if (this.field[lastTurnX][i]===this.prevPlayer) {
                     trueWinnerX++;
                 }
-                if (this.field[i][lastTurnY]==this.prevPlayer) {
+                if (this.field[i][lastTurnY]===this.prevPlayer) {
                     trueWinnerY++;
                 }
-                if (this.field[i][i]==this.prevPlayer) {
+                if (this.field[i][i]===this.prevPlayer) {
                     trueWinnerDiagonalX++;
                 }
-                if (this.field[i][2-i]==this.prevPlayer) {
+                if (this.field[i][2-i]===this.prevPlayer) {
                     trueWinnerDiagonalY++;
                 }
             }
 
-            if((trueWinnerX==3)||(trueWinnerY==3)||(trueWinnerDiagonalX==3)||(trueWinnerDiagonalY==3)) {
+            if((trueWinnerX===3)||(trueWinnerY===3)||(trueWinnerDiagonalX===3)||(trueWinnerDiagonalY===3)) {
                 this.Winner=1;
                 return true;
             }
-            if (this.count==9) {
+            if (this.count===9) {
                 return true;
             }
         return false;
@@ -87,21 +87,21 @@ class TicTacToe {
         for (var i=0; i<3;i++ ) {
             
 
-                if (this.field[lastTurnX][i]==this.prevPlayer) {
+                if (this.field[lastTurnX][i]===this.prevPlayer) {
                     trueWinnerX++;
                 }
-                if (this.field[i][lastTurnY]==this.prevPlayer) {
+                if (this.field[i][lastTurnY]===this.prevPlayer) {
                     trueWinnerY++;
                 }
-                if (this.field[i][i]==this.prevPlayer) {
+                if (this.field[i][i]===this.prevPlayer) {
                     trueWinnerDiagonalX++;
                 }
-                if (this.field[i][2-i]==this.prevPlayer) {
+                if (this.field[i][2-i]===this.prevPlayer) {
                     trueWinnerDiagonalY++;
                 }
             }
 
-            if((trueWinnerX==3)||(trueWinnerY==3)||(trueWinnerDiagonalX==3)||(trueWinnerDiagonalY==3)) {
+            if((trueWinnerX===3)||(trueWinnerY===3)||(trueWinnerDiagonalX===3)||(trueWinnerDiagonalY===3)) {
                 this.Winner=1;
                 return this.prevPlayer;
             }
@@ -109,7 +109,7 @@ class TicTacToe {
     }
 
     noMoreTurns() {
-        if (this.count==9) {
+        if (this.count===9) {
             return true;
         }
         else {return false;}
@@ -126,24 +126,24 @@ class TicTacToe {
         for (var i=0; i<3;i++ ) {
             
 
-                if (this.field[lastTurnX][i]==this.prevPlayer) {
+                if (this.field[lastTurnX][i]===this.prevPlayer) {
                     trueWinnerX++;
                 }
-                if (this.field[i][lastTurnY]==this.prevPlayer) {
+                if (this.field[i][lastTurnY]===this.prevPlayer) {
                     trueWinnerY++;
                 }
-                if (this.field[i][i]==this.prevPlayer) {
+                if (this.field[i][i]===this.prevPlayer) {
                     trueWinnerDiagonalX++;
                 }
-                if (this.field[i][2-i]==this.prevPlayer) {
+                if (this.field[i][2-i]===this.prevPlayer) {
                     trueWinnerDiagonalY++;
                 }
             }
 
-            if((trueWinnerX==3)||(trueWinnerY==3)||(trueWinnerDiagonalX==3)||(trueWinnerDiagonalY==3)) {
+            if((trueWinnerX===3)||(trueWinnerY===3)||(trueWinnerDiagonalX===3)||(trueWinnerDiagonalY===3)) {
                 this.Winner=1;              
             }
-        if((this.count==9)&&(this.Winner==0)) {
+        if((this.count===9)&&(this.Winner===0)) {
             return true;
         }
         else{return false;}
